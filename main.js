@@ -49,10 +49,13 @@ const People = (function () {
     }
 
     function addPersonName() {
-        if(form.input.value) {
+        if(form.input.value != 0) {
             nameArray.push(form.input.value);
             form.input.value = '';
             render();
+        }
+        else {
+            form.input.focus();
         }
     }
 
